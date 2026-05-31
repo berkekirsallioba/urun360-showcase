@@ -1,0 +1,28 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="32" fill="#071421"/>
+  <rect x="48" y="42" width="280" height="636" rx="28" fill="#0D2133" stroke="#1D7C61" stroke-opacity=".45"/>
+  <circle cx="104" cy="100" r="24" fill="#20C878"/>
+  <rect x="144" y="82" width="128" height="18" rx="9" fill="#F6FBFF"/>
+  <rect x="144" y="112" width="86" height="12" rx="6" fill="#86A5BE"/>
+  <rect x="84" y="178" width="208" height="46" rx="14" fill="#122D43"/>
+  <rect x="84" y="244" width="208" height="46" rx="14" fill="#102639"/>
+  <rect x="84" y="310" width="208" height="46" rx="14" fill="#102639"/>
+  <rect x="84" y="376" width="208" height="46" rx="14" fill="#102639"/>
+  <text x="368" y="100" fill="#F6FBFF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900">Admin Mode</text>
+  <text x="368" y="136" fill="#93A9BF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Configuration, feature flags, scanner behavior and health status</text>
+  <rect x="368" y="184" width="380" height="210" rx="26" fill="#0D2133" stroke="#274D61"/>
+  <rect x="784" y="184" width="400" height="210" rx="26" fill="#0D2133" stroke="#274D61"/>
+  <rect x="368" y="430" width="816" height="196" rx="26" fill="#0D2133" stroke="#274D61"/>
+  <text x="400" y="238" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Display Settings</text>
+  <text x="816" y="238" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Feature Flags</text>
+  <text x="400" y="484" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">System Health</text>
+  <rect x="400" y="270" width="300" height="38" rx="12" fill="#081825" stroke="#214D63"/>
+  <rect x="400" y="326" width="300" height="38" rx="12" fill="#081825" stroke="#214D63"/>
+  <rect x="816" y="276" width="252" height="24" rx="12" fill="#142D43"/>
+  <circle cx="1104" cy="288" r="15" fill="#20C878"/>
+  <rect x="816" y="328" width="252" height="24" rx="12" fill="#142D43"/>
+  <circle cx="1104" cy="340" r="15" fill="#344B5E"/>
+  <rect x="400" y="526" width="720" height="44" rx="14" fill="#081825" stroke="#1D7C61" stroke-opacity=".45"/>
+  <rect x="424" y="542" width="210" height="12" rx="6" fill="#20C878"/>
+  <rect x="400" y="588" width="500" height="16" rx="8" fill="#55758F"/>
+</svg>

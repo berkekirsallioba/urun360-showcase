@@ -1,0 +1,32 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="32" fill="#071421"/>
+  <rect x="0" y="0" width="1280" height="720" rx="32" fill="url(#bg)"/>
+  <rect x="48" y="42" width="1184" height="636" rx="30" fill="#0C1B2A" fill-opacity=".82" stroke="#1E8A6A" stroke-opacity=".45"/>
+  <rect x="88" y="80" width="360" height="58" rx="14" fill="#0F2435" stroke="#214D63"/>
+  <circle cx="118" cy="109" r="14" fill="#19B86A"/>
+  <rect x="144" y="100" width="250" height="18" rx="9" fill="#DDEBFF" fill-opacity=".85"/>
+  <text x="88" y="196" fill="#66D79A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">DISPLAY MODE</text>
+  <text x="88" y="285" fill="#F4FAFF" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">Premium Product Name</text>
+  <text x="88" y="354" fill="#93A9BF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Barcode / QR product display for customer screens</text>
+  <rect x="88" y="420" width="700" height="170" rx="28" fill="url(#price)" stroke="#33C986" stroke-opacity=".55"/>
+  <text x="130" y="476" fill="#0B1B2A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">SALE PRICE</text>
+  <text x="126" y="560" fill="#071421" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">₺299,90</text>
+  <rect x="840" y="185" width="300" height="300" rx="28" fill="#F8FBFF" fill-opacity=".08" stroke="#6BE6A6" stroke-opacity=".35"/>
+  <circle cx="990" cy="322" r="72" fill="#12314A"/>
+  <path d="M955 324h70M990 289v70" stroke="#6BE6A6" stroke-width="16" stroke-linecap="round"/>
+  <rect x="840" y="530" width="300" height="60" rx="18" fill="#122B3D" stroke="#214D63"/>
+  <rect x="862" y="552" width="190" height="16" rx="8" fill="#6BE6A6"/>
+  <text x="1072" y="561" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">15s</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720">
+      <stop stop-color="#06111F"/>
+      <stop offset=".55" stop-color="#09263D"/>
+      <stop offset="1" stop-color="#071421"/>
+    </linearGradient>
+    <linearGradient id="price" x1="88" y1="420" x2="788" y2="590">
+      <stop stop-color="#67E59A"/>
+      <stop offset=".52" stop-color="#DCEEFF"/>
+      <stop offset="1" stop-color="#74A8FF"/>
+    </linearGradient>
+  </defs>
+</svg>
