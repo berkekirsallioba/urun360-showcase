@@ -1,13 +1,17 @@
 <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1280" height="720" rx="32" fill="#071421"/>
+  <rect width="1280" height="720" rx="32" fill="url(#bg)"/>
+
   <rect x="44" y="40" width="1192" height="104" rx="26" fill="#0D2133" stroke="#1D7C61" stroke-opacity=".5"/>
   <circle cx="100" cy="92" r="24" fill="#20C878"/>
   <rect x="146" y="70" width="290" height="20" rx="10" fill="#F5FAFF"/>
   <rect x="146" y="104" width="160" height="14" rx="7" fill="#81A4C2"/>
   <rect x="720" y="66" width="420" height="54" rx="15" fill="#F8FBFF" fill-opacity=".08" stroke="#2B6D82"/>
   <rect x="1148" y="66" width="44" height="54" rx="14" fill="#1FC674"/>
+
   <text x="64" y="204" fill="#F6FBFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Operator Mode</text>
   <text x="64" y="238" fill="#93A9BF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Staff-facing barcode lookup and product detail workflow</text>
+
   <rect x="64" y="278" width="520" height="350" rx="26" fill="#0D2133" stroke="#274D61"/>
   <rect x="96" y="310" width="160" height="160" rx="24" fill="#122D43" stroke="#2B6D82"/>
   <circle cx="176" cy="390" r="48" fill="#071421"/>
@@ -16,13 +20,14 @@
   <rect x="290" y="360" width="210" height="18" rx="9" fill="#DDEBFF"/>
   <rect x="290" y="398" width="170" height="18" rx="9" fill="#7C96AE"/>
   <rect x="96" y="510" width="438" height="72" rx="18" fill="#081825" stroke="#1D7C61" stroke-opacity=".55"/>
-  <text x="118" y="557" fill="#F6FBFF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">₺299,90</text>
+  <text x="118" y="557" fill="#F6FBFF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">TL 299,90</text>
+
   <rect x="624" y="278" width="260" height="160" rx="24" fill="#0D2133" stroke="#274D61"/>
   <rect x="916" y="278" width="260" height="160" rx="24" fill="#0D2133" stroke="#274D61"/>
   <rect x="624" y="468" width="552" height="160" rx="24" fill="#0D2133" stroke="#274D61"/>
   <text x="654" y="328" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Recent Scans</text>
   <text x="946" y="328" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Modules</text>
-  <text x="654" y="520" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Warehouse & Price Cards</text>
+  <text x="654" y="520" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Warehouse &amp; Price Cards</text>
   <rect x="654" y="356" width="190" height="18" rx="9" fill="#79A2C4"/>
   <rect x="654" y="390" width="150" height="18" rx="9" fill="#476A84"/>
   <rect x="946" y="358" width="190" height="26" rx="13" fill="#162F46"/>
@@ -30,4 +35,12 @@
   <rect x="654" y="552" width="150" height="36" rx="12" fill="#142D43"/>
   <rect x="824" y="552" width="150" height="36" rx="12" fill="#142D43"/>
   <rect x="994" y="552" width="150" height="36" rx="12" fill="#142D43"/>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720">
+      <stop stop-color="#06111F"/>
+      <stop offset=".56" stop-color="#09263D"/>
+      <stop offset="1" stop-color="#071421"/>
+    </linearGradient>
+  </defs>
 </svg>
