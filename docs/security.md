@@ -1,31 +1,25 @@
-# Security
+# Security & Privacy
 
-This public repository is documentation-only.
+This repository is a **public, documentation-only showcase**. It does not include:
 
-## Public Repository Rules
+- Proprietary application source code
+- Customer or employee records
+- Database credentials, connection strings, or environment files
+- Customer-specific settings or private deployment scripts
+- ERP table definitions, private SQL queries, or internal implementation details
 
-This repository does not contain:
+## Data Access Boundary
 
-- Source code
-- Database credentials
-- Environment files
-- Application settings
-- Customer-specific implementation details
-- Wolvox database table or query details
-- Private deployment configuration
+The browser interacts with the ASP.NET Core API; it does not directly connect to the Wolvox Firebird database.
 
-## Database Access Principle
+The product has both information-lookup functionality and operational workflows for price and image changes. Earlier public documentation described the entire integration as read-only; that description is no longer accurate.
 
-The frontend never connects directly to the database. Database access is handled by the backend API.
+Authentication, authorization, validation, logging, and other protections must be reviewed in the context of the actual deployment. This showcase does **not** certify a specific customer's security posture.
 
-## Read-Only Principle
+## External Access
 
-Initial Wolvox Firebird integration is designed with a read-only principle. Product information can be queried without modifying customer data or the Wolvox database schema.
+Some deployments can use HTTPS through a configured Cloudflare Tunnel. The existence of this option is not a claim that every installation is Internet-accessible or identically secured.
 
-## Risky Operations
+## Visuals
 
-Operations such as price updates, image upload, and label printing require additional validation, role-based authorization, auditability, and deployment-specific review before activation.
-
-## Public IP Deployment
-
-Public IP deployment requires a separate security review. HTTPS, authentication, firewall rules, rate limiting, and access control should be evaluated before exposing the application outside an internal network.
+SVG previews in this repository are representative concepts, not live application screenshots. They do not contain customer data.
