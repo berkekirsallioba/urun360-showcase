@@ -1,39 +1,21 @@
-# Deployment
+# Deployment Overview
 
-Ürün360 is designed for local or internal server deployment.
+Ürün360 follows a local / server-first deployment model. This is a public architectural overview, **not a customer installation guide**.
 
-## Windows Service Model
+## Application Hosting
 
-The application runs as a Windows Service on the hosting machine. This service hosts both the backend API and the frontend static files.
+The application is designed to run from a customer-controlled Windows machine or server, with Windows Service hosting. Users access the supported Display, Operator, and Admin experiences through a browser.
 
-The goal is to allow the application to start automatically when Windows starts.
+## Local Access
 
-## Local / Server Installation
+Devices on an authorized local network can use the application through the configured host address, subject to the installation's network and access-control settings.
 
-Typical installation targets:
+## Optional Remote Access
 
-- Local cashier computer
-- Internal server
-- Back-office machine
-- Store network server
+Customer environments may provide HTTPS access through an existing Cloudflare Tunnel configuration. External availability and access controls are deployment-specific.
 
-## Browser-Based Access
+This repository does not publish hostnames, database paths, customer-specific ports, credentials, installer scripts, or network configuration.
 
-Users access Ürün360 from a browser. The application is not distributed as a traditional desktop application for end users.
+## Code & Configuration
 
-Example URLs:
-
-```text
-http://localhost:8890/display
-http://SERVER-IP:8890/display
-http://SERVER-IP:8890/operator
-http://SERVER-IP:8890/admin
-```
-
-## Public IP Note
-
-Public IP access is not the primary deployment target. If external access is required, firewall, router forwarding, HTTPS, authentication, and access restriction must be reviewed separately.
-
-## Executable Note
-
-If an executable file exists in the deployment package, it is used only as the server-side application host. End users access the application through a browser.
+Application source code, customer settings, and production configuration are private and excluded from this showcase.
