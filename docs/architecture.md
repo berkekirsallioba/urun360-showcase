@@ -1,50 +1,38 @@
 # Architecture
 
-Ürün360 is designed as a browser-based application backed by an ASP.NET Core Web API.
+Ürün360 is a browser-based application with a React / TypeScript interface and an ASP.NET Core backend API connected to Wolvox ERP / Firebird data.
 
 ## Browser-Based Access
 
-Users access the system through a browser. No traditional desktop client is required for end users.
+Users interact through a web browser rather than a traditional desktop client. The application has distinct Display, Operator, and Admin experiences.
 
 ## Local / Server-First Deployment
 
-The application is intended to run on a local machine or an internal server. Devices on the same network can access the application through the server address.
+The application is intended to run on a local machine or customer-managed server, with Windows Service hosting. Supported devices can access the application through a browser.
 
-## Windows Service Hosting
+## Integration Boundary
 
-The backend hosts the application as a Windows Service. This allows the system to start automatically with Windows and stay available without manually running a console application.
+The browser communicates with the backend API. The backend handles ERP data access; database credentials and customer-specific connection details are not exposed to clients.
 
-## API-First Integration
+## Data Operations
 
-The frontend communicates with the backend API. Product lookup, settings, health checks, and integration logic are handled through the API layer.
+The product supports product information lookups and operational workflows that include product price updates and product image changes. It must **not** be represented as a universally read-only application.
 
-## Backend-Controlled Database Access
+Exact write paths, authorization rules, ERP table structures, and customer-specific safeguards are intentionally omitted from this public description.
 
-The frontend never connects directly to the database. Database access is controlled by the backend.
+## High-Level Flow
 
-## Read-Only Database Access
+```text
+Barcode / QR input or product search
+                 ↓
+         Browser interface
+    Display / Operator / Admin
+                 ↓
+       ASP.NET Core API
+                 ↓
+       Wolvox ERP / Firebird
+```
 
-Initial Wolvox Firebird integration is designed around a read-only principle. Product lookup and related information are retrieved without modifying the Wolvox database schema or customer data.
+## Representative Visuals
 
-## Responsive Display
-
-The display interface is designed for multiple screen sizes:
-
-- TV and kiosk screens
-- Cashier monitors
-- Tablets
-- Mobile phones
-
-## Application Routes
-
-### `/display`
-
-Customer-facing or kiosk-style product display screen. It waits for barcode/QR input and shows the product clearly for a configurable duration.
-
-### `/operator`
-
-Staff-facing operation screen for barcode lookup, manual product search, product details, and operational modules.
-
-### `/admin`
-
-Configuration and management screen for display settings, scanner behavior, feature visibility, application configuration, and health checks.
+The public showcase SVGs are illustrative mockups, not screenshots or evidence of a particular live deployment.
