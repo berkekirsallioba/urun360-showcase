@@ -1,193 +1,109 @@
 <p align="center">
-  <img src="./assets/logo.png" width="180" alt="Ürün360 Logo" />
+  <img src="./assets/logo.png" width="160" alt="Ürün360 logo" />
 </p>
 
 <h1 align="center">Ürün360</h1>
+<p align="center"><strong>ERP-Integrated Product Lookup & Price Display Platform</strong></p>
+<p align="center">Barcode / QR scanning · Product information · Retail operations</p>
 
-<p align="center">
-  Wolvox ERP Integrated Barcode & QR Product Display Platform
-</p>
+> **Public portfolio showcase only.** Application source code, customer data, database details, and private deployment configuration are not published here.
 
-<p align="center">
-  <strong>Scan a product. See the product instantly.</strong>
-</p>
+## The Business Problem
 
-> This repository is a public project showcase. Source code is private.
+Retail and warehouse teams need quick access to reliable product information at the point of service. Product details may live in an ERP system, while employees and customers need a clear, responsive experience on cashier displays, kiosks, tablets, and phones.
 
-## Overview
+**Ürün360** bridges that workflow with a browser-based interface connected to **AKINSOFT Wolvox ERP** data through a **C# / ASP.NET Core backend**.
 
-Ürün360 is a modern product display and barcode/QR lookup platform designed for retail, warehouse, and service environments.
+## What Ürün360 Does
 
-The application allows staff or customers to scan a barcode/QR code and instantly view product information on a responsive screen such as a cashier monitor, tablet, customer display, or TV.
+- Looks up products through barcode and QR-based workflows.
+- Displays product names, prices, stock information, and other available product details.
+- Supports multiple price presentations and product imagery.
+- Offers separate browser-based **Display**, **Operator**, and **Admin** experiences.
+- Includes operational workflows for **product price updates** and **product image changes**, in addition to information display.
+- Runs in a server-first model, with browser access from supported client devices.
 
-## Purpose
+Feature availability and behavior depend on the application version and customer configuration. This showcase is not a public live demo.
 
-Ürün360 was designed to provide a clear, fast, browser-based product information experience for environments where barcode readers, customer-facing displays, and internal ERP data need to work together.
+## Application Experiences
 
-The goal is to keep the user experience simple:
+### Display — Customer-Facing Product Information
 
-- Scan a product.
-- Retrieve product information securely through the backend.
-- Display the product name, price, stock, image, and metadata clearly.
-- Return automatically to an idle screen after a configurable timeout.
+Designed for visible product identification and price presentation on customer displays, kiosks, and other screens.
 
-## Core Use Case
+![Representative Display concept](./assets/screenshots/display-mode.svg)
 
-1. A cashier or staff member scans a barcode or QR code.
-2. The application captures the scanned value through a standard barcode reader.
-3. The backend queries product information from the Wolvox Firebird database.
-4. Product details are displayed on a modern responsive screen.
-5. The screen automatically returns to idle mode after a configurable timeout.
+### Operator — Staff Product Operations
 
-## Key Features
+Supports product lookups and staff-facing product information and operational workflows.
 
-- Barcode / QR based product lookup
-- Responsive display for monitor, tablet, phone, and TV screens
-- Display mode for customer-facing screens
-- Operator mode for staff usage
-- Admin mode for configuration
-- Product details screen
-- Multi-price display
-- Warehouse-based stock balance display
-- Product image support
-- Product group / subgroup information
-- Voice price reading support
-- Configurable display timeout
-- Windows Service based deployment
-- Local/server-first architecture
+![Representative Operator concept](./assets/screenshots/operator-mode.svg)
 
-## Application Modes
+### Admin — Configuration
 
-### Display Mode
+Provides an administrative surface for supported configuration and application settings.
 
-Route: `/display`
+![Representative Admin concept](./assets/screenshots/admin-mode.svg)
 
-Customer-facing or kiosk-style screen.
-Used for waiting for barcode/QR input, showing product name and price clearly, displaying product details for a limited time, and returning to idle screen automatically.
+**Visual note:** The three images above are illustrative SVG mockups, **not screenshots of the live application**. They contain no customer information.
 
-![Display Mode](./assets/screenshots/display-mode.svg)
+## Technology Overview
 
-### Operator Mode
+| Area | Technologies |
+| --- | --- |
+| Backend | C#, .NET, ASP.NET Core Web API |
+| Frontend | React, TypeScript |
+| Data integration | AKINSOFT Wolvox ERP, Firebird |
+| Deployment approach | Windows Service / local-server hosting, browser-based access |
+| External access | HTTPS through an appropriately configured Cloudflare Tunnel deployment |
 
-Route: `/operator`
+The application interface communicates with the backend API; the browser does not directly connect to the ERP database.
 
-Staff-facing screen.
-Used for manual product search, barcode/QR lookup, viewing detailed product information, and accessing operational modules.
-
-![Operator Mode](./assets/screenshots/operator-mode.svg)
-
-### Admin Mode
-
-Route: `/admin`
-
-Configuration and management screen.
-Used for display timeout settings, scanner behavior settings, feature visibility, application configuration, and health/status checks.
-
-![Admin Mode](./assets/screenshots/admin-mode.svg)
-
-## Preview
-
-The showcase visuals in this repository are representative mockups. They do not contain customer data, real product data, database details, or source code.
-
-## Technology Stack
-
-### Frontend
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
-- TanStack Query
-- React Hook Form
-- Zod
-
-### Backend
-
-- C#
-- .NET / ASP.NET Core Web API
-- Swagger / OpenAPI
-- Serilog
-- xUnit
-
-### Database
-
-- Firebird
-- Wolvox ERP database integration
-- Read-only data access principle for initial phases
-
-### Testing & Quality
-
-- Playwright
-- ESLint
-- Prettier
-- Snyk-ready dependency review
-- Code review ready structure
-
-### Deployment
-
-- Windows Service
-- Local/server installation
-- Browser-based access
-- Single-port application hosting
-
-## Architecture
+### High-Level Architecture
 
 ```text
-Barcode Reader / QR Reader
-        ↓
-React Display Interface
-        ↓
-ASP.NET Core Web API
-        ↓
-Wolvox Firebird Database
-        ↓
-Product information displayed on screen
+Barcode / QR input or product search
+                 |
+          Browser interface
+      Display / Operator / Admin
+                 |
+        ASP.NET Core Web API
+                 |
+       Wolvox ERP / Firebird
 ```
 
-## Deployment Model
+This is intentionally a simplified conceptual diagram; internal schemas, queries, customer-specific settings, and proprietary implementation details are excluded.
 
-Ürün360 is not distributed as a traditional desktop application.
+## Engineering Focus
 
-The application runs on a local machine or internal server as a Windows Service. Users access it through a browser.
+- Connecting a modern browser interface to an existing ERP data source
+- Designing product lookup and information-display workflows for different devices
+- Handling product pricing, stock visibility, and operational data changes
+- Separating customer-facing, operator, and administrative experiences
+- Supporting a locally hosted application with optional secure remote access
 
-Example URLs:
+## Ongoing Improvements
 
-```text
-http://localhost:8890/display
-http://SERVER-IP:8890/display
-http://SERVER-IP:8890/operator
-http://SERVER-IP:8890/admin
-```
+The product continues to evolve. Current areas of refinement include:
 
-## Security Notes
+- Display layout for long product names and more prominent secondary prices
+- Fast product search across names, codes, and barcode/QR input
+- Consistent spoken-price behavior on mobile devices
 
-- The frontend never connects directly to the database.
-- Database connection information is kept on the backend side.
-- Firebird access is handled through the API layer.
-- The initial integration is designed with a read-only principle.
-- Risky operations such as price update, image upload, and label printing require additional validation and authorization before activation.
+These are **improvement areas**, not claims that every enhancement has already been completed or deployed.
 
-## Roadmap
+## Source Code & Privacy
 
-- [x] Product concept and architecture
-- [x] Display / Operator / Admin mode planning
-- [x] React frontend prototype
-- [x] ASP.NET Core API structure
-- [x] Barcode reader workflow
-- [x] Windows Service deployment planning
-- [ ] Firebird read-only production integration
-- [ ] Advanced role-based authorization
-- [ ] Label printing workflow
-- [ ] Product image management
-- [ ] Extended reporting and analytics
+This repository contains **presentation documentation and representative visuals only**.
 
-## Project Status
+The application source code remains private. Customer records, credentials, Firebird database schemas, private deployment scripts, and configuration secrets are not shared.
 
-This project is currently under active development.
-Source code is private and not included in this repository.
+See [Security & privacy](./docs/security.md) and [Repository notice](./NOTICE.md).
 
-## Disclaimer
+## About the Developer
 
-Ürün360 is an independent custom software project designed for Wolvox ERP integrated product lookup scenarios.
-This repository is for portfolio and documentation purposes only.
+Created as part of my work building enterprise software and ERP-integrated business applications.
+
+**Berke Kırşallıoba** — Full-Stack .NET Developer
+
+[GitHub Profile](https://github.com/berkekirsallioba) · [LinkedIn](https://www.linkedin.com/in/berkekirsallioba)
