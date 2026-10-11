@@ -1,44 +1,35 @@
 # Features
 
-## Core Features
+Ürün360 is an ERP-integrated product information and operational platform. The list below describes the product at a high level; availability can differ across deployed versions and environments.
 
-- Barcode / QR lookup
-- Product details display
-- Multi-price display
-- Warehouse balance cards
-- Product image placeholder/support
-- Product group and subgroup metadata
-- Voice price reading support
-- Display timeout setting
-- Display / Operator / Admin modes
+## Product Capabilities
 
-## Product Information Display
+- Barcode / QR product lookup
+- Product details, pricing, and stock information display
+- Multiple price presentations
+- Product image display and image-changing workflows
+- Product price update workflows
+- Separate Display, Operator, and Admin experiences
+- Browser access on supported screen sizes
+- Local or internal-server hosting
 
-The product screen focuses on readable and fast product identification:
+## Product Information
 
-- Product name
-- Price
-- Barcode or stock code
-- Unit
-- Stock balance
-- Brand and model
-- Product group and subgroup
-- Product image or placeholder
+Depending on the available ERP data and configuration, product details may include name, barcode/stock code, price, stock balance, unit, group/subgroup, and imagery.
 
-## Screen Modes
+## Experiences
 
-Ürün360 separates usage into three browser routes:
+- **Display:** Customer-facing or kiosk-style product information
+- **Operator:** Staff-facing lookups and operational actions
+- **Admin:** Supported application configuration and management
 
-- `/display` for customer-facing display usage
-- `/operator` for staff operations
-- `/admin` for configuration and management
+## Continuing Development
 
-## Planned Advanced Features
+The following are improvement areas; do not assume they are complete in every build:
 
-- Label printing workflow
-- Product image management
-- Role-based authorization
-- Device-specific display settings
-- Extended operational reporting
+- Improved layout for long product names and secondary prices
+- Faster search by name, stock code, barcode, or QR data
+- More consistent voice-price reading on mobile devices
+- Other operational enhancements evaluated against project needs
 
-Riskier operational features are designed to require additional authorization and validation before production activation.
+This documentation describes the product publicly without exposing customer-specific data models or implementation details.
